@@ -4,6 +4,9 @@ import random
 
 t.colormode(255)
 
+screen = t.Screen()
+screen.setup(height=600, width=600)
+
 # colors = colorgram.extract('hirstsass.png', 30)
 # hirst_colors = []
 #
@@ -70,7 +73,7 @@ color_list = [
 turt = t.Turtle()
 turt.ht()
 turt.pu()
-turt.setposition(-250, -250)
+turt.setposition(-230, -230)
 turt.pensize(5)
 turt.speed("fastest")
 
@@ -78,11 +81,11 @@ for _ in range(100):
     random_color = random.choice(color_list2)
     turt.dot(25, random_color)
     turt.fd(50)
-    if turt.xcor() >= 250:
-        turt.setx(-250)
+    if turt.xcor() >= 270:
+        turt.setx(-230)
         turt.sety(turt.ycor() + 50)
 
-### ------- playing with other algos below -------- ###
+# ------- playing with other algos below -------- #
 
 # d_size = 20
 # numby = 2
@@ -120,5 +123,4 @@ for _ in range(100):
 #     turt.sety(rand_int2 + (value*-1))
 #     value += 2
 
-screen = t.Screen()
 screen.exitonclick()
